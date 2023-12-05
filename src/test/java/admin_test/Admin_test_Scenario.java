@@ -303,7 +303,7 @@ public class Admin_test_Scenario
 		
 		jsC.executeScript("arguments[0].click();",C);
 		
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 		
 		
 		
@@ -425,7 +425,11 @@ public class Admin_test_Scenario
 		
 //		[Feedback Question Type Page]	[Add]
 		
-		driver.findElement(By.xpath("//label[text()='Feedback Question Type']")).click();
+		WebElement E1 = driver.findElement(By.xpath("//label[text()='Feedback Question Type']"));
+		
+		JavascriptExecutor jsE1 = (JavascriptExecutor)driver;
+		
+		jsE1.executeScript("arguments[0].click();",E1);
 		
 		Thread.sleep(3000);
 		
