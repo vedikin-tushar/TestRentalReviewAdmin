@@ -61,124 +61,124 @@ public class Admin_test_Scenario
 		
 //		[User Page]	[Add]
 		
-		driver.findElement(By.xpath("//*[@id=\"user\"]/a/label")).click();
-		
-		Thread.sleep(3000);
-		
-		String Expected_URL_2 = "https://sonline.us/rental-review/admin/#/user-list";
-		
-		String Actual_URL_2 = driver.getCurrentUrl();
-		System.out.println(Actual_URL_2);
-		
-		AssertJUnit.assertEquals(Expected_URL_2,Actual_URL_2);
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"content\"]/h4/button/i")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("full_name")).sendKeys("Automation User");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("email")).sendKeys("Automation.test@gmail.com");
-		
-		Thread.sleep(3000);
-	
-		WebElement user_role = driver.findElement(By.id("user_role_id"));
-		Select ur = new Select(user_role); 
-		Thread.sleep(2000);
-		ur.selectByVisibleText(" Renter ");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("mask-phone")).sendKeys("416-555-0141");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("password-field")).sendKeys("asd@231");
-		
-		Thread.sleep(3000);
-		
-		WebElement A = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();",A);
-		
-		Thread.sleep(6000);
+//		driver.findElement(By.xpath("//*[@id=\"user\"]/a/label")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_URL_2 = "https://sonline.us/rental-review/admin/#/user-list";
+//		
+//		String Actual_URL_2 = driver.getCurrentUrl();
+//		System.out.println(Actual_URL_2);
+//		
+//		AssertJUnit.assertEquals(Expected_URL_2,Actual_URL_2);
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"content\"]/h4/button/i")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("full_name")).sendKeys("Automation User");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("email")).sendKeys("Automation.test@gmail.com");
+//		
+//		Thread.sleep(3000);
+//	
+//		WebElement user_role = driver.findElement(By.id("user_role_id"));
+//		Select ur = new Select(user_role); 
+//		Thread.sleep(2000);
+//		ur.selectByVisibleText(" Renter ");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("mask-phone")).sendKeys("416-555-0141");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("password-field")).sendKeys("asd@231");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement A = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("arguments[0].click();",A);
+//		
+//		Thread.sleep(6000);
 		
 //		[User Page]	[Edit]
 
 		
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automation User");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"user_list_table\"]/tbody/tr/td[2]")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("full_name")).clear();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("full_name")).sendKeys("Automation Users");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("email")).clear();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("email")).sendKeys("Automation1.test@gmail.com");
-		
-		Thread.sleep(3000);
-	
-		WebElement country = driver.findElement(By.id("review_type"));
-		Select coun = new Select(country); 
-		Thread.sleep(2000);
-		coun.selectByVisibleText(" Canada ");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("mask-phone")).clear();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("mask-phone")).sendKeys("416-555-0140");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("password-field")).clear();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("password-field")).sendKeys("asd@231");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset[1]/div[5]/div[2]/label/span")).click();
-		
-		Thread.sleep(3000);
-		
-		WebElement B = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsB = (JavascriptExecutor)driver;
-		
-		jsB.executeScript("arguments[0].click();",B);
-				
-		Thread.sleep(3000);
-		
-		String Expected_Status = "No";
-		
-		WebElement user_status = driver.findElement(By.xpath("//*[@id=\"user_list_table\"]/tbody/tr[1]/td[5]"));
-		String Actual_Status = user_status.getText();
-		
-		AssertJUnit.assertEquals(Expected_Status,Actual_Status);
-		
-		Thread.sleep(3000);
-		
+//		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automation User");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"user_list_table\"]/tbody/tr/td[2]")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("full_name")).clear();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("full_name")).sendKeys("Automation Users");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("email")).clear();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("email")).sendKeys("Automation1.test@gmail.com");
+//		
+//		Thread.sleep(3000);
+//	
+//		WebElement country = driver.findElement(By.id("review_type"));
+//		Select coun = new Select(country); 
+//		Thread.sleep(2000);
+//		coun.selectByVisibleText(" Canada ");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("mask-phone")).clear();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("mask-phone")).sendKeys("416-555-0140");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("password-field")).clear();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("password-field")).sendKeys("asd@231");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset[1]/div[5]/div[2]/label/span")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement B = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsB = (JavascriptExecutor)driver;
+//		
+//		jsB.executeScript("arguments[0].click();",B);
+//				
+//		Thread.sleep(3000);
+//		
+//		String Expected_Status = "No";
+//		
+//		WebElement user_status = driver.findElement(By.xpath("//*[@id=\"user_list_table\"]/tbody/tr[1]/td[5]"));
+//		String Actual_Status = user_status.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_Status,Actual_Status);
+//		
+//		Thread.sleep(3000);
+//		
 		
 		
 
@@ -193,117 +193,117 @@ public class Admin_test_Scenario
 		
 //		[Review Page]
 		
-		driver.findElement(By.xpath("//label[text()='Review']")).click();
-		
-		Thread.sleep(6000);
-		
-		String Expected_URL_3 = "https://sonline.us/rental-review/admin/#/review-list";
-		
-		String Actual_URL_3 = driver.getCurrentUrl();
-		System.out.println(Actual_URL_3);
-		
-		AssertJUnit.assertEquals(Expected_URL_3,Actual_URL_3);
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"review_list_table\"]/tbody/tr[1]")).click();
-		
-		Thread.sleep(4000);
-
-		String Expected_URL = "https://sonline.us/rental-review/admin/#/review-edit";
-		
-		String Actual_URL = driver.getCurrentUrl();
-		System.out.println(Actual_URL);
-		
-		AssertJUnit.assertEquals(Expected_URL,Actual_URL);
-		
-		Thread.sleep(3000);
-		
-		String Expected_heading = "Edit Review";
-		
-		WebElement heading = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
-		String Actual_heading = heading.getText();
-		
-		AssertJUnit.assertEquals(Expected_heading,Actual_heading);
-		
-		Thread.sleep(2000);
-		
-		String Expected_username = "User Name";
-		
-		WebElement username = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[2]/label"));
-		String Actual_username = username.getText();
-		
-		AssertJUnit.assertEquals(Expected_username,Actual_username);
-		
-		Thread.sleep(2000);
-		
-		String Expected_propertyname = "Property Name*";
-		
-		WebElement propertyname = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
-		String Actual_propertyname = propertyname.getText();
-		
-		AssertJUnit.assertEquals(Expected_propertyname,Actual_propertyname);
-		
-		Thread.sleep(2000);
-		
-		String Expected_IP_address = "IP address";
-		
-		WebElement IP_address = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[4]/label"));
-		String Actual_IP_address = IP_address.getText();
-		
-		AssertJUnit.assertEquals(Expected_IP_address,Actual_IP_address);
-		
-		Thread.sleep(2000);
-		
-		String Expected_address = "Address";
-		
-		WebElement address = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[5]/label"));
-		String Actual_address = address.getText();
-		
-		AssertJUnit.assertEquals(Expected_address,Actual_address);
-		
-		Thread.sleep(2000);
-		
-		String Expected_message = "Message";
-		
-		WebElement message = driver.findElement(By.xpath("//*[@id=\"message\"]/label"));
-		String Actual_message = message.getText();
-		
-		AssertJUnit.assertEquals(Expected_message,Actual_message);
-		
-		Thread.sleep(2000);
-		
-		String Expected_approved = "Approved";
-		
-		WebElement Approved = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[7]/label"));
-		String Actual_approved = Approved.getText();
-		
-		AssertJUnit.assertEquals(Expected_approved,Actual_approved);
-		
-		Thread.sleep(2000);
-		
-		String Expected_active = "Active";
-		
-		WebElement active = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[8]/label"));
-		String Actual_active = active.getText();
-		
-		AssertJUnit.assertEquals(Expected_active,Actual_active);
-		
-		Thread.sleep(2000);
-		
-		JavascriptExecutor JS = (JavascriptExecutor)driver;
-		
-		JS.executeScript("window.scrollBy(0,500)");
-		
-		Thread.sleep(3000);
-		
-		WebElement C = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsC = (JavascriptExecutor)driver;
-		
-		jsC.executeScript("arguments[0].click();",C);
-		
-		Thread.sleep(8000);
+//		driver.findElement(By.xpath("//label[text()='Review']")).click();
+//		
+//		Thread.sleep(6000);
+//		
+//		String Expected_URL_3 = "https://sonline.us/rental-review/admin/#/review-list";
+//		
+//		String Actual_URL_3 = driver.getCurrentUrl();
+//		System.out.println(Actual_URL_3);
+//		
+//		AssertJUnit.assertEquals(Expected_URL_3,Actual_URL_3);
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"review_list_table\"]/tbody/tr[1]")).click();
+//		
+//		Thread.sleep(4000);
+//
+//		String Expected_URL = "https://sonline.us/rental-review/admin/#/review-edit";
+//		
+//		String Actual_URL = driver.getCurrentUrl();
+//		System.out.println(Actual_URL);
+//		
+//		AssertJUnit.assertEquals(Expected_URL,Actual_URL);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_heading = "Edit Review";
+//		
+//		WebElement heading = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
+//		String Actual_heading = heading.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_heading,Actual_heading);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_username = "User Name";
+//		
+//		WebElement username = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[2]/label"));
+//		String Actual_username = username.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_username,Actual_username);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_propertyname = "Property Name*";
+//		
+//		WebElement propertyname = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
+//		String Actual_propertyname = propertyname.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_propertyname,Actual_propertyname);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_IP_address = "IP address";
+//		
+//		WebElement IP_address = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[4]/label"));
+//		String Actual_IP_address = IP_address.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_IP_address,Actual_IP_address);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_address = "Address";
+//		
+//		WebElement address = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[5]/label"));
+//		String Actual_address = address.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_address,Actual_address);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_message = "Message";
+//		
+//		WebElement message = driver.findElement(By.xpath("//*[@id=\"message\"]/label"));
+//		String Actual_message = message.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_message,Actual_message);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_approved = "Approved";
+//		
+//		WebElement Approved = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[7]/label"));
+//		String Actual_approved = Approved.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_approved,Actual_approved);
+//		
+//		Thread.sleep(2000);
+//		
+//		String Expected_active = "Active";
+//		
+//		WebElement active = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[8]/label"));
+//		String Actual_active = active.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_active,Actual_active);
+//		
+//		Thread.sleep(2000);
+//		
+//		JavascriptExecutor JS = (JavascriptExecutor)driver;
+//		
+//		JS.executeScript("window.scrollBy(0,500)");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement C = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsC = (JavascriptExecutor)driver;
+//		
+//		jsC.executeScript("arguments[0].click();",C);
+//		
+//		Thread.sleep(8000);
 		
 		
 		
@@ -316,101 +316,101 @@ public class Admin_test_Scenario
 		
 //		[Feedback Question Page]	[Add]
 		
-		driver.findElement(By.xpath("//label[text()='Feedback Question']")).click();
-		
-		Thread.sleep(3000);
-			
-		String Expected_URL_4 = "https://sonline.us/rental-review/admin/#/question-list";
-		
-		String Actual_URL_4 = driver.getCurrentUrl();
-		System.out.println(Actual_URL_4);
-		
-		AssertJUnit.assertEquals(Expected_URL_4,Actual_URL_4);
-		
-		Thread.sleep(3000);
-		
-		
-		driver.findElement(By.xpath("//*[@id=\"review_list_content\"]/h4/button/i")).click();
-		
-		Thread.sleep(3000);
-		
-		WebElement review_type = driver.findElement(By.id("review_type"));
-		Select rt = new Select(review_type); 
-		Thread.sleep(2000);
-		rt.selectByVisibleText(" Communication ");
-		
-		Thread.sleep(3000);
-		
-		WebElement review_category = driver.findElement(By.id("review_category"));
-		Select rc = new Select(review_category); 
-		Thread.sleep(2000);
-		rc.selectByVisibleText("Renter");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("review_question")).sendKeys("Automated_Were they responsive to requests and inquiries?");
-		
-		Thread.sleep(3000);
-		
-		WebElement D = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsD = (JavascriptExecutor)driver;
-		
-		jsD.executeScript("arguments[0].click();",D);
-		
-		Thread.sleep(6000);
+//		driver.findElement(By.xpath("//label[text()='Feedback Question']")).click();
+//		
+//		Thread.sleep(3000);
+//			
+//		String Expected_URL_4 = "https://sonline.us/rental-review/admin/#/question-list";
+//		
+//		String Actual_URL_4 = driver.getCurrentUrl();
+//		System.out.println(Actual_URL_4);
+//		
+//		AssertJUnit.assertEquals(Expected_URL_4,Actual_URL_4);
+//		
+//		Thread.sleep(3000);
+//		
+//		
+//		driver.findElement(By.xpath("//*[@id=\"review_list_content\"]/h4/button/i")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement review_type = driver.findElement(By.id("review_type"));
+//		Select rt = new Select(review_type); 
+//		Thread.sleep(2000);
+//		rt.selectByVisibleText(" Communication ");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement review_category = driver.findElement(By.id("review_category"));
+//		Select rc = new Select(review_category); 
+//		Thread.sleep(2000);
+//		rc.selectByVisibleText("Renter");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("review_question")).sendKeys("Automated_Were they responsive to requests and inquiries?");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement D = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsD = (JavascriptExecutor)driver;
+//		
+//		jsD.executeScript("arguments[0].click();",D);
+//		
+//		Thread.sleep(6000);
 		
 //		[Feedback Question Type]	[Update]
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Were they responsive to requests and inquiries?");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"question_list_table\"]/tbody/tr/td[2]")).click();
-		
-		Thread.sleep(3000);
-		
-		WebElement edit_review_type = driver.findElement(By.id("review_edit_type"));
-		Select ert = new Select(edit_review_type); 
-		Thread.sleep(2000);
-		ert.selectByVisibleText(" Property Condition ");
-			
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("review_edit_question")).clear();
-		
-		Thread.sleep(2000);
-		
-		driver.findElement(By.id("review_edit_question")).sendKeys("Automated_Were_they responsive to requests and inquiries?");
-		
-		Thread.sleep(3000);
-		
-		WebElement E = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsE = (JavascriptExecutor)driver;
-		
-		jsE.executeScript("arguments[0].click();",E);
-		
-		Thread.sleep(5000);
+//		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Were they responsive to requests and inquiries?");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"question_list_table\"]/tbody/tr/td[2]")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement edit_review_type = driver.findElement(By.id("review_edit_type"));
+//		Select ert = new Select(edit_review_type); 
+//		Thread.sleep(2000);
+//		ert.selectByVisibleText(" Property Condition ");
+//			
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("review_edit_question")).clear();
+//		
+//		Thread.sleep(2000);
+//		
+//		driver.findElement(By.id("review_edit_question")).sendKeys("Automated_Were_they responsive to requests and inquiries?");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement E = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsE = (JavascriptExecutor)driver;
+//		
+//		jsE.executeScript("arguments[0].click();",E);
+//		
+//		Thread.sleep(5000);
 		
 //		[Feedback Question Type]	[Delete]	
 		
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Were_they responsive to requests and inquiries?");
+//		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Were_they responsive to requests and inquiries?");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"question_list_table\"]/tbody/tr/td[2]")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
+//		
+//		Thread.sleep(5000);
+//		
+//		Alert alert = driver.switchTo().alert();
+//		System.out.println(alert.getText());
+//		alert.accept(); //click on OK btn
 		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"question_list_table\"]/tbody/tr/td[2]")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
-		
-		Thread.sleep(5000);
-		
-		Alert alert = driver.switchTo().alert();
-		System.out.println(alert.getText());
-		alert.accept(); //click on OK btn
-		
-		Thread.sleep(8000);
+//		Thread.sleep(8000);
 		
 //		alert.dismiss(); //click on cancel btn //
 		
@@ -425,83 +425,83 @@ public class Admin_test_Scenario
 		
 //		[Feedback Question Type Page]	[Add]
 		
-		WebElement E1 = driver.findElement(By.xpath("//label[text()='Feedback Question Type']"));
-		
-		JavascriptExecutor jsE1 = (JavascriptExecutor)driver;
-		
-		jsE1.executeScript("arguments[0].click();",E1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_URL_5 = "https://sonline.us/rental-review/admin/#/question-type-list";
-		
-		String Actual_URL_5 = driver.getCurrentUrl();
-		System.out.println(Actual_URL_5);
-		
-		AssertJUnit.assertEquals(Expected_URL_5,Actual_URL_5);
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"content\"]/h4/button[2]/i")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("review_type_name")).sendKeys("Automated_Recommendation");
-		
-		Thread.sleep(3000);
-		
-		WebElement F = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsF = (JavascriptExecutor)driver;
-		
-		jsF.executeScript("arguments[0].click();",F);
-		
-		Thread.sleep(6000);
+//		WebElement E1 = driver.findElement(By.xpath("//label[text()='Feedback Question Type']"));
+//		
+//		JavascriptExecutor jsE1 = (JavascriptExecutor)driver;
+//		
+//		jsE1.executeScript("arguments[0].click();",E1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_URL_5 = "https://sonline.us/rental-review/admin/#/question-type-list";
+//		
+//		String Actual_URL_5 = driver.getCurrentUrl();
+//		System.out.println(Actual_URL_5);
+//		
+//		AssertJUnit.assertEquals(Expected_URL_5,Actual_URL_5);
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"content\"]/h4/button[2]/i")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("review_type_name")).sendKeys("Automated_Recommendation");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement F = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsF = (JavascriptExecutor)driver;
+//		
+//		jsF.executeScript("arguments[0].click();",F);
+//		
+//		Thread.sleep(6000);
 		
 //		[Edit Feedback Question Type]   [Update]
 		
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Recommendation");
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"question_type_list_table\"]/tbody/tr/td[5]/button/i")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.id("review_type_name")).clear();
-		
-		Thread.sleep(2000);
-		
-		driver.findElement(By.id("review_type_name")).sendKeys("Automated_Recommendation_1");
-		
-		Thread.sleep(3000);
-		
-		WebElement H = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsH = (JavascriptExecutor)driver;
-		
-		jsH.executeScript("arguments[0].click();",H);
-		
-		Thread.sleep(5000);
+//		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Recommendation");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"question_type_list_table\"]/tbody/tr/td[5]/button/i")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.id("review_type_name")).clear();
+//		
+//		Thread.sleep(2000);
+//		
+//		driver.findElement(By.id("review_type_name")).sendKeys("Automated_Recommendation_1");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement H = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsH = (JavascriptExecutor)driver;
+//		
+//		jsH.executeScript("arguments[0].click();",H);
+//		
+//		Thread.sleep(5000);
 		
 //		[Edit Feedback Question Type]   [Delete]		
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Recommendation_1");
+//		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Automated_Recommendation_1");
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"question_type_list_table\"]/tbody/tr/td[5]/button/i")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
+//		
+//		Thread.sleep(5000);
+//		
+//		Alert alert_1 = driver.switchTo().alert();
+//		System.out.println(alert_1.getText());
+//		alert_1.accept(); //click on OK btn
 		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"question_type_list_table\"]/tbody/tr/td[5]/button/i")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
-		
-		Thread.sleep(5000);
-		
-		Alert alert_1 = driver.switchTo().alert();
-		System.out.println(alert_1.getText());
-		alert_1.accept(); //click on OK btn
-		
-		Thread.sleep(8000);
+//		Thread.sleep(8000);
 		
 //		alert.dismiss(); //click on cancel btn	//
 		
@@ -513,109 +513,109 @@ public class Admin_test_Scenario
 		
 //		[Review Report Page]	
 		
-		driver.findElement(By.xpath("//label[text()='Review Report']")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"report_list_table\"]/tbody/tr[1]")).click();
-		
-		Thread.sleep(3000);
-		
-		String Expected_URL_11 = "https://sonline.us/rental-review/admin/#/review-edit";
-		
-	
-		String Actual_URL_11 = driver.getCurrentUrl();
-		System.out.println(Actual_URL_11);
-		
-		AssertJUnit.assertEquals(Expected_URL_11,Actual_URL_11);
-		
-		Thread.sleep(3000);
-		
-		String Expected_heading_1 = "Edit Review";
-		
-		WebElement heading_1 = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
-		String Actual_heading_1 = heading_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_heading_1,Actual_heading_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_username_1 = "User Name";
-		
-		WebElement username_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[2]/label"));
-		String Actual_username_1 = username_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_username_1,Actual_username_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_propertyname_1 = "Property Name*";
-		
-		WebElement propertyname_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
-		String Actual_propertyname_1 = propertyname_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_propertyname_1,Actual_propertyname_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_IP_address_1 = "IP address";
-		
-		WebElement IP_address_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[4]/label"));
-		String Actual_IP_address_1 = IP_address_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_IP_address_1,Actual_IP_address_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_address_1 = "Address";
-		
-		WebElement address_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[5]/label"));
-		String Actual_address_1 = address_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_address_1,Actual_address_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_message_1 = "Message";
-		
-		WebElement message_1= driver.findElement(By.xpath("//*[@id=\"message\"]/label"));
-		String Actual_message_1 = message_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_message_1,Actual_message_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_approved_1 = "Approved";
-		
-		WebElement Approved_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[7]/label"));
-		String Actual_approved_1 = Approved_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_approved_1,Actual_approved_1);
-		
-		Thread.sleep(3000);
-		
-		String Expected_active_1 = "Active";
-		
-		WebElement active_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[8]/label"));
-		String Actual_active_1 = active_1.getText();
-		
-		AssertJUnit.assertEquals(Expected_active_1,Actual_active_1);
-		
-		Thread.sleep(3000);
-		
-		JavascriptExecutor JS_1 = (JavascriptExecutor)driver;
-		
-		JS_1.executeScript("window.scrollBy(0,500)");
-		
-		Thread.sleep(3000);
-		
-		WebElement I = driver.findElement(By.xpath("//button[@type='submit']"));
-		
-		JavascriptExecutor jsI = (JavascriptExecutor)driver;
-		
-		jsI.executeScript("arguments[0].click();",I);
-		
-		Thread.sleep(8000);
+//		driver.findElement(By.xpath("//label[text()='Review Report']")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"report_list_table\"]/tbody/tr[1]")).click();
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_URL_11 = "https://sonline.us/rental-review/admin/#/review-edit";
+//		
+//	
+//		String Actual_URL_11 = driver.getCurrentUrl();
+//		System.out.println(Actual_URL_11);
+//		
+//		AssertJUnit.assertEquals(Expected_URL_11,Actual_URL_11);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_heading_1 = "Edit Review";
+//		
+//		WebElement heading_1 = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
+//		String Actual_heading_1 = heading_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_heading_1,Actual_heading_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_username_1 = "User Name";
+//		
+//		WebElement username_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[2]/label"));
+//		String Actual_username_1 = username_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_username_1,Actual_username_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_propertyname_1 = "Property Name*";
+//		
+//		WebElement propertyname_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
+//		String Actual_propertyname_1 = propertyname_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_propertyname_1,Actual_propertyname_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_IP_address_1 = "IP address";
+//		
+//		WebElement IP_address_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[4]/label"));
+//		String Actual_IP_address_1 = IP_address_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_IP_address_1,Actual_IP_address_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_address_1 = "Address";
+//		
+//		WebElement address_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[5]/label"));
+//		String Actual_address_1 = address_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_address_1,Actual_address_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_message_1 = "Message";
+//		
+//		WebElement message_1= driver.findElement(By.xpath("//*[@id=\"message\"]/label"));
+//		String Actual_message_1 = message_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_message_1,Actual_message_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_approved_1 = "Approved";
+//		
+//		WebElement Approved_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[7]/label"));
+//		String Actual_approved_1 = Approved_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_approved_1,Actual_approved_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		String Expected_active_1 = "Active";
+//		
+//		WebElement active_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[8]/label"));
+//		String Actual_active_1 = active_1.getText();
+//		
+//		AssertJUnit.assertEquals(Expected_active_1,Actual_active_1);
+//		
+//		Thread.sleep(3000);
+//		
+//		JavascriptExecutor JS_1 = (JavascriptExecutor)driver;
+//		
+//		JS_1.executeScript("window.scrollBy(0,500)");
+//		
+//		Thread.sleep(3000);
+//		
+//		WebElement I = driver.findElement(By.xpath("//button[@type='submit']"));
+//		
+//		JavascriptExecutor jsI = (JavascriptExecutor)driver;
+//		
+//		jsI.executeScript("arguments[0].click();",I);
+//		
+//		Thread.sleep(8000);
 		
 		
 		
@@ -758,11 +758,11 @@ public class Admin_test_Scenario
 				+ "\r\n"
 				+ "");
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		WebElement J = driver.findElement(By.xpath("//button[@type='submit']"));
 		
