@@ -25,7 +25,7 @@ public class Admin_test_Scenario
 		Thread.sleep(6000);
 		
 		driver.get("https://sonline.us/rental-review/admin/");
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		
 		Thread.sleep(3000);
 		
@@ -101,7 +101,10 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement A = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();",A);
 		
 		Thread.sleep(6000);
 		
