@@ -1034,7 +1034,7 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		String Expected_CMS_content = "Share Your Rental Experience";
+		String Expected_CMS_content = "Share Your Rental Experiences";
 		
 		WebElement CMS_cont = driver.findElement(By.xpath("(//div[contains (@class,'ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline')])"));
 		String Actual_CMS_content = CMS_cont.getText();
@@ -1171,7 +1171,7 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(8000);
 		
-		driver.findElement(By.xpath("//label[text()='Sign Out']")).click();
+		driver.findElement(By.xpath("//label[text()='Sign Out]")).click();
 		
 		Thread.sleep(3000);
 		
