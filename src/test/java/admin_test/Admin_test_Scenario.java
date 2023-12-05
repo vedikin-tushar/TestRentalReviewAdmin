@@ -162,8 +162,12 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement B = driver.findElement(By.xpath("//button[@type='submit']"));
 		
+		JavascriptExecutor jsB = (JavascriptExecutor)driver;
+		
+		jsB.executeScript("arguments[0].click();",B);
+				
 		Thread.sleep(3000);
 		
 		String Expected_Status = "No";
@@ -293,7 +297,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement C = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsC = (JavascriptExecutor)driver;
+		
+		jsC.executeScript("arguments[0].click();",C);
 		
 		Thread.sleep(4000);
 		
@@ -344,7 +352,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement D = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsD = (JavascriptExecutor)driver;
+		
+		jsD.executeScript("arguments[0].click();",D);
 		
 		Thread.sleep(6000);
 		
@@ -372,7 +384,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement E = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsE = (JavascriptExecutor)driver;
+		
+		jsE.executeScript("arguments[0].click();",E);
 		
 		Thread.sleep(5000);
 		
@@ -430,7 +446,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement F = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsF = (JavascriptExecutor)driver;
+		
+		jsF.executeScript("arguments[0].click();",F);
 		
 		Thread.sleep(6000);
 		
@@ -452,7 +472,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement H = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsH = (JavascriptExecutor)driver;
+		
+		jsH.executeScript("arguments[0].click();",H);
 		
 		Thread.sleep(5000);
 		
@@ -581,7 +605,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement I = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsI = (JavascriptExecutor)driver;
+		
+		jsI.executeScript("arguments[0].click();",I);
 		
 		Thread.sleep(6000);
 		
@@ -732,7 +760,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement J = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsJ = (JavascriptExecutor)driver;
+		
+		jsJ.executeScript("arguments[0].click();",J);
 		
 		Thread.sleep(6000);
 		
@@ -795,7 +827,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement K = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsK = (JavascriptExecutor)driver;
+		
+		jsK.executeScript("arguments[0].click();",K);
 		
 		Thread.sleep(6000);
 		
@@ -854,7 +890,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement L = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsL = (JavascriptExecutor)driver;
+		
+		jsL.executeScript("arguments[0].click();",L);
 		
 		Thread.sleep(6000);
 		
@@ -876,7 +916,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement M = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsM = (JavascriptExecutor)driver;
+		
+		jsM.executeScript("arguments[0].click();",M);
 		
 		Thread.sleep(5000);
 		
@@ -943,7 +987,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement N = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsN = (JavascriptExecutor)driver;
+		
+		jsN.executeScript("arguments[0].click();",N);
 		
 		Thread.sleep(6000);
 		
@@ -973,7 +1021,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement O = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsO = (JavascriptExecutor)driver;
+		
+		jsO.executeScript("arguments[0].click();",O);
 		
 		Thread.sleep(5000);
 		
@@ -1044,7 +1096,11 @@ public class Admin_test_Scenario
 		
 		AssertJUnit.assertEquals(Expected_CMS_content,Actual_CMS_content);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement P = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsP = (JavascriptExecutor)driver;
+		
+		jsP.executeScript("arguments[0].click();",P);
 		
 		Thread.sleep(5000);
 		
@@ -1067,7 +1123,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement Q = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsQ = (JavascriptExecutor)driver;
+		
+		jsQ.executeScript("arguments[0].click();",Q);
 		
 		Thread.sleep(5000);
 		
@@ -1113,7 +1173,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);	
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement R = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsR = (JavascriptExecutor)driver;
+		
+		jsR.executeScript("arguments[0].click();",R);
 		
 		Thread.sleep(5000);
 		
@@ -1148,7 +1212,11 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement S = driver.findElement(By.xpath("//button[@type='submit']"));
+		
+		JavascriptExecutor jsS = (JavascriptExecutor)driver;
+		
+		jsS.executeScript("arguments[0].click();",S);
 		
 		Thread.sleep(5000);
 		
