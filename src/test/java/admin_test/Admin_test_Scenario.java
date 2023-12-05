@@ -99,7 +99,7 @@ public class Admin_test_Scenario
 		
 		driver.findElement(By.id("password-field")).sendKeys("asd@231");
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
