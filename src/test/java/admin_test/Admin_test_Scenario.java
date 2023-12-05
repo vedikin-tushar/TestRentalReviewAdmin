@@ -410,7 +410,7 @@ public class Admin_test_Scenario
 		System.out.println(alert.getText());
 		alert.accept(); //click on OK btn
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 //		alert.dismiss(); //click on cancel btn //
 		
@@ -497,7 +497,7 @@ public class Admin_test_Scenario
 		System.out.println(alert_1.getText());
 		alert_1.accept(); //click on OK btn
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 //		alert.dismiss(); //click on cancel btn	//
 		
@@ -611,7 +611,7 @@ public class Admin_test_Scenario
 		
 		jsI.executeScript("arguments[0].click();",I);
 		
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		
 		
 		
