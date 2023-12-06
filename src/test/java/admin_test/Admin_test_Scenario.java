@@ -762,17 +762,14 @@ public class Admin_test_Scenario
 		Thread.sleep(5000);
 		
 		WebElement I2 = driver.findElement(By.id("blog_image"));
-//		I2.sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
-		
-//		JavascriptExecutor jsI2 = (JavascriptExecutor)driver;
 		
 		Thread.sleep(3000);
 		
-		Actions action = new Actions(driver);
-		action.sendKeys(I2, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
-		
-//		jsI2.executeScript("arguments[0].value='C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg'",I2);
-		
+		Actions action2 = new Actions(driver);
+		action2.sendKeys(I2, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
+	
+//		JavascriptExecutor jsI2 = (JavascriptExecutor)driver;		
+//		jsI2.executeScript("arguments[0].value='C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg'",I2);		
 //		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
 		
 		Thread.sleep(5000);
@@ -840,7 +837,14 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\0dae5676-8702-499e-9fb8-7921d7e0da12.jpg");
+		WebElement I3 = driver.findElement(By.id("blog_image"));
+		
+		Thread.sleep(3000);
+		
+		Actions action3 = new Actions(driver);
+		action3.sendKeys(I3, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\0dae5676-8702-499e-9fb8-7921d7e0da12.jpg");
+		
+//		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\0dae5676-8702-499e-9fb8-7921d7e0da12.jpg");
 		
 		Thread.sleep(3000);
 		
@@ -1186,7 +1190,14 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);	
 		
-		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
+		WebElement I4 = driver.findElement(By.id("blog_image"));
+		
+		Thread.sleep(3000);
+		
+		Actions action4 = new Actions(driver);
+		action4.sendKeys(I4, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
+		
+//		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
 		
 		Thread.sleep(3000);	
 		
@@ -1225,7 +1236,14 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
+		WebElement I5 = driver.findElement(By.id("blog_image"));
+		
+		Thread.sleep(3000);
+		
+		Actions action5 = new Actions(driver);
+		action5.sendKeys(I5, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
+		
+//		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\39d11141-77f2-44e7-8909-ee799ba8806a.png");
 		
 		Thread.sleep(3000);
 		
