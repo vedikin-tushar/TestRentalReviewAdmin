@@ -1286,13 +1286,23 @@ public class Admin_test_Scenario
 		
 ////	[Sign out]
 		
-//		WebElement T = driver.findElement(By.xpath("//label[text()='Sign Out']"));
-//		
-//		JavascriptExecutor jsT = (JavascriptExecutor)driver;
-//		
-//		jsT.executeScript("arguments[0].click();",T);
+		WebElement T = driver.findElement(By.xpath("//label[text()='Sign Out']"));
 		
-		driver.findElement(By.xpath("//label[text()='Sign Out']")).click();
+		JavascriptExecutor jsT = (JavascriptExecutor)driver;
+		
+		jsT.executeScript("arguments[0].click();",T);
+		
+//		driver.findElement(By.xpath("//label[text()='Sign Out']")).click();
+		
+		Thread.sleep(5000);
+		
+		
+		String Expected_URL_11 = "https://sonline.us/rental-review/admin/#/login";
+		
+		String Actual_URL_11 = driver.getCurrentUrl();
+		System.out.println(Actual_URL_11);
+		
+		AssertJUnit.assertEquals(Expected_URL_11,Actual_URL_11);
 		
 		Thread.sleep(3000);
 		
