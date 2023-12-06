@@ -866,7 +866,13 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
+		WebElement K2 = driver.findElement(By.xpath("//button[text()=' Delete']"));
+		
+		JavascriptExecutor jsK2 = (JavascriptExecutor)driver;
+		
+		jsK2.executeScript("arguments[0].click();",K2);
+		
+//		driver.findElement(By.xpath("//button[text()=' Delete']")).click();
 		
 		Thread.sleep(5000);
 		
