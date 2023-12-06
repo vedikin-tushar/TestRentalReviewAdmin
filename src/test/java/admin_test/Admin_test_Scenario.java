@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
@@ -760,7 +761,19 @@ public class Admin_test_Scenario
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
+		WebElement I2 = driver.findElement(By.id("blog_image"));
+//		I2.sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
+		
+//		JavascriptExecutor jsI2 = (JavascriptExecutor)driver;
+		
+		Thread.sleep(3000);
+		
+		Actions action = new Actions(driver);
+		action.sendKeys(I2, "C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
+		
+//		jsI2.executeScript("arguments[0].value='C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg'",I2);
+		
+//		driver.findElement(By.id("blog_image")).sendKeys("C:\\Users\\tushar.bagul\\eclipse-workspace\\Rental-Review\\src\\test\\resources\\3ceff6a3-243a-4e1e-8791-abab5d20d637.jpg");
 		
 		Thread.sleep(5000);
 		
