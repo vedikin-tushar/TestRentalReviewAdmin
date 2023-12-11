@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="admin_test.Admin_test_Scenario"/>
+      <class name="front_test.Front_test_Scenario"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

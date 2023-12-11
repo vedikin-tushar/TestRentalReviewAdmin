@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="admin_test.Admin_test_Scenario">
+      <class name="front_test.Front_test_Scenario">
         <methods>
-          <include name="VerifyadminPositiveflow"/>
+          <include name="VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow"/>
         </methods>
-      </class> <!-- admin_test.Admin_test_Scenario -->
+      </class> <!-- front_test.Front_test_Scenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
