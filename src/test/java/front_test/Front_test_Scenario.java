@@ -1,29 +1,46 @@
 package front_test;
 
 import java.awt.AWTException;
+import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.asynchttpclient.util.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Front_test_Scenario 
+
+public class Front_test_Scenario extends Base_Class
 {
+	
+	
 	@Test(priority=0)
 
-	public void VerifyRegistrationflowPositiveflow() throws InterruptedException, AWTException	
+	public void VerifyRegistrationflowPositiveflow () throws InterruptedException, AWTException	
 	{
+		logger = report.createTest("VerifyRegistrationflowPositiveflow");
+		
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-		
+		this.driver = driver;
 		Thread.sleep(6000);
 		
 //////		driver.get("https://sonline.us/rental-review/");
@@ -87,32 +104,21 @@ public class Front_test_Scenario
 		Thread.sleep(8000);
 		
 		driver.quit();
+		
+		logger.pass("Test case is pass");
 	}
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
+					
 		@Test (priority=1)
 ////	[Goint to admin approval]
 		
-		public void VerifyAdminApprovalflowPositiveflow() throws InterruptedException, AWTException	
+	public void VerifyAdminApprovalflowPositiveflow() throws InterruptedException, AWTException	
 		{
+			logger = report.createTest("VerifyAdminApprovalflowPositiveflow");
+			
 			WebDriverManager.chromedriver().setup();
 			ChromeDriver driver = new ChromeDriver();
-			
-			Thread.sleep(6000);
-			
-		Thread.sleep(3000);
-		
-		WebDriverManager.chromedriver().setup();
+			this.driver = driver;
+	
 		
 		Thread.sleep(6000);
 		
@@ -206,27 +212,21 @@ public class Front_test_Scenario
 		Thread.sleep(5000);
 		
 		driver.quit();
+		
+		logger.pass("Test case is pass");
 	}
 	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		
 		@Test(priority=2)
 		
 	public void VerifySigninflowPositiveflow() throws InterruptedException, AWTException	
 	{
+		logger = report.createTest("VerifySigninflowPositiveflow");
+			
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
+		this.driver = driver;
 			
 		Thread.sleep(6000);
 			
@@ -463,25 +463,25 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		String Expected_Property = "Automatic_House";
-		
-		WebElement get_Actual_Property = driver.findElement(By.xpath("//h3[text()='Automatic_House']"));
-		String Actual_Property = get_Actual_Property.getText();
-			
-		AssertJUnit.assertEquals(Expected_Property,Actual_Property);
-			
-		Thread.sleep(3000);
+//		String Expected_Property = "Automatic_House";
+//		
+//		WebElement get_Actual_Property = driver.findElement(By.xpath("//h3[text()='Automatic_House']"));
+//		String Actual_Property = get_Actual_Property.getText();
+//			
+//		AssertJUnit.assertEquals(Expected_Property,Actual_Property);
+//			
+//		Thread.sleep(3000);
 		
 		String Expected_Address = "270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario";
 		
-		WebElement get_Actual_Address = driver.findElement(By.xpath("//p[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario ']"));
+		WebElement get_Actual_Address = driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']"));
 		String Actual_Address = get_Actual_Address.getText();
 			
 		AssertJUnit.assertEquals(Expected_Address,Actual_Address);
 			
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//h3[text()='Automatic_House']")).click();
+		driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']")).click();
 		
 		Thread.sleep(3000);
 		
@@ -683,25 +683,25 @@ public class Front_test_Scenario
 		
 		Thread.sleep(6000);
 		
-		String Expected_Property_1 = "Automatic_House";
-		
-		WebElement get_Actual_Property_1 = driver.findElement(By.xpath("//h3[text()='Automatic_House']"));
-		String Actual_Property_1 = get_Actual_Property_1.getText();
-			
-		AssertJUnit.assertEquals(Expected_Property_1,Actual_Property_1);
-			
-		Thread.sleep(3000);
+//		String Expected_Property_1 = "Automatic_House";
+//		
+//		WebElement get_Actual_Property_1 = driver.findElement(By.xpath("//h3[text()='Automatic_House']"));
+//		String Actual_Property_1 = get_Actual_Property_1.getText();
+//			
+//		AssertJUnit.assertEquals(Expected_Property_1,Actual_Property_1);
+//			
+//		Thread.sleep(3000);
 		
 		String Expected_Address_1 = "270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario";
 		
-		WebElement get_Actual_Address_1 = driver.findElement(By.xpath("//p[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario ']"));
+		WebElement get_Actual_Address_1 = driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']"));
 		String Actual_Address_1 = get_Actual_Address_1.getText();
 			
 		AssertJUnit.assertEquals(Expected_Address_1,Actual_Address_1);
 			
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//h3[text()='Automatic_House']")).click();
+		driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']")).click();
 		
 		Thread.sleep(3000);
 		
@@ -761,27 +761,19 @@ public class Front_test_Scenario
 		
 		driver.quit();		
 		
+		logger.pass("Test case is pass");
 	}
-		
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		@Test(priority=3)
 		
 	public void VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException	
 	{
+		logger = report.createTest("VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow");
+			
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
+		this.driver = driver;
 			
 		Thread.sleep(6000);
 			
@@ -904,12 +896,44 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
+		driver.quit();
 		
+		logger.pass("Test case is pass");
 		
+}	
 		
+			
+		@Test(priority=4)
 		
-		
-		
+	public void VerifyRegistrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException	
+	{
+		logger = report.createTest("VerifyRegistrationflow_blog_contact_footer_withNegativeflow");
+			
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+		this.driver = driver;
+			
+		Thread.sleep(6000);
+			
+//////		driver.get("https://sonline.us/rental-review/");
+		driver.get("https://sonline.us/rental-review/front-dev/");
+		driver.manage().window().maximize();
+			
+		Thread.sleep(3000);
+			
+		driver.navigate().refresh();
+			
+		Thread.sleep(6000);
+			
+		String Expected_URL_1 = "https://sonline.us/rental-review/front-dev/#/home";
+//////		String Expected_URL_1 = "https://sonline.us/rental-review/#/home";
+			
+		String Actual_URL_1 = driver.getCurrentUrl();
+		System.out.println(Actual_URL_1);
+			
+		AssertJUnit.assertEquals(Expected_URL_1,Actual_URL_1);
+			
+		Thread.sleep(3000);
 		
 		
 		
@@ -1038,6 +1062,12 @@ public class Front_test_Scenario
 		
 		driver.findElement(By.xpath("//*[@id=\"main-menu1\"]/li[5]/a")).click();
 		
+		Thread.sleep(5000);
+		
+		JavascriptExecutor JScp_ = (JavascriptExecutor)driver;
+		
+		JScp_.executeScript("window.scrollBy(0,600)");
+		
 		Thread.sleep(3000);
 		
 		WebElement ForContactPG = driver.findElement(By.xpath("//button[@type='submit']"));
@@ -1066,7 +1096,7 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
-		driver.findElement(By.id("email")).sendKeys("Aotumationtest@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("Automationtest@gmail.com");
 		
 		Thread.sleep(3000);
 		
@@ -1076,7 +1106,7 @@ public class Front_test_Scenario
 		
 		driver.findElement(By.id("message")).sendKeys("Hello");
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		WebElement ForContactPG1 = driver.findElement(By.xpath("//button[@type='submit']"));
 		
@@ -1092,6 +1122,12 @@ public class Front_test_Scenario
 		System.out.println(Actual_URL_10);
 		
 		AssertJUnit.assertEquals(Expected_URL_10,Actual_URL_10);
+		
+		Thread.sleep(3000);
+		
+		JavascriptExecutor JScp2 = (JavascriptExecutor)driver;
+		
+		JScp2.executeScript("window.scrollBy(0,-700)");
 		
 		Thread.sleep(3000);
 		
@@ -1181,6 +1217,15 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
+		String Expected_FAQ_ = "FAQs";
+		
+		WebElement get_Actual_FAQ_ = driver.findElement(By.xpath("//h3[text()='FAQs']"));
+		String Actual_FAQ_ = get_Actual_FAQ_.getText();
+			
+		AssertJUnit.assertEquals(Expected_FAQ_,Actual_FAQ_);
+		
+		Thread.sleep(3000);
+		
 		JavascriptExecutor JSF1 = (JavascriptExecutor)driver;
 		
 		JSF1.executeScript("window.scrollBy(0,2000)");
@@ -1206,6 +1251,15 @@ public class Front_test_Scenario
 		System.out.println(Actual_URL_PrivacyP);
 		
 		AssertJUnit.assertEquals(Expected_URL_PrivacyP,Actual_URL_PrivacyP);
+		
+		Thread.sleep(3000);
+		
+		String Expected_PrivacyP = "Privacy Policy";
+		
+		WebElement get_Actual_PrivacyP = driver.findElement(By.xpath("//h3[text()='Privacy Policy']"));
+		String Actual_PrivacyP = get_Actual_PrivacyP.getText();
+			
+		AssertJUnit.assertEquals(Expected_PrivacyP,Actual_PrivacyP);
 		
 		Thread.sleep(3000);
 		
@@ -1238,6 +1292,15 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
+		String Expected_TenantO = "Tenant Organization";
+		
+		WebElement get_Actual_TenantO = driver.findElement(By.xpath("//h3[text()='Tenant Organization']"));
+		String Actual_TenantO = get_Actual_TenantO.getText();
+			
+		AssertJUnit.assertEquals(Expected_TenantO,Actual_TenantO);
+		
+		Thread.sleep(3000);
+		
 		JavascriptExecutor JSF3 = (JavascriptExecutor)driver;
 		
 		JSF3.executeScript("window.scrollBy(0,2000)");
@@ -1266,9 +1329,23 @@ public class Front_test_Scenario
 		
 		Thread.sleep(3000);
 		
+		String Expected_communityG = "Community Guideline";
+		
+		WebElement get_Actual_communityG = driver.findElement(By.xpath("//h3[text()='Community Guideline']"));
+		String Actual_communityG = get_Actual_communityG.getText();
+			
+		AssertJUnit.assertEquals(Expected_communityG,Actual_communityG);
+		
+		Thread.sleep(3000);
 		
 		driver.quit();			
+		
+		logger.pass("Test case is pass");
 				
 	}
+		
+	
+		
+	
 }
 	

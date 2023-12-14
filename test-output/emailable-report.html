@@ -8,11 +8,36 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">104,124</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,456,399</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">front_test.Front_test_Scenario</td><td><a href="#m0">VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow</a></td><td rowspan="1">1702296380847</td><td rowspan="1">104067</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">front_test.Front_test_Scenario</td><td><a href="#m0">VerifySigninflowPositiveflow</a></td><td rowspan="1">1702550704078</td><td rowspan="1">236710</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">front_test.Admin_test_Scenarios</td><td><a href="#m1">VerifyadminPositiveflow</a></td><td rowspan="1">1702551248935</td><td rowspan="1">740148</td></tr><tr class="passedodd"><td rowspan="4">front_test.Front_test_Scenario</td><td><a href="#m2">VerifyAdminApprovalflowPositiveflow</a></td><td rowspan="1">1702550610619</td><td rowspan="1">91363</td></tr><tr class="passedodd"><td><a href="#m3">VerifyRegistrationflowPositiveflow</a></td><td rowspan="1">1702550534995</td><td rowspan="1">73237</td></tr><tr class="passedodd"><td><a href="#m4">VerifyRegistrationflow_blog_contact_footer_withNegativeflow</a></td><td rowspan="1">1702551027529</td><td rowspan="1">219337</td></tr><tr class="passedodd"><td><a href="#m5">VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow</a></td><td rowspan="1">1702550943563</td><td rowspan="1">81905</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">front_test.Front_test_Scenario#VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">front_test.Front_test_Scenario#VerifySigninflowPositiveflow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1328, 1023)
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ec181a5eeb34a8d58a0b5af15c37b286, clickElement {id=54E2FBF92FC24B62203B7073288609B1_element_352}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\TUSHAR~1.BAG\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59924}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59924/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ec181a5eeb34a8d58a0b5af15c37b286)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: ec181a5eeb34a8d58a0b5af15c37b286
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at front_test.Front_test_Scenario.VerifySigninflowPositiveflow(Front_test_Scenario.java:625)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">front_test.Admin_test_Scenarios#VerifyadminPositiveflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">front_test.Front_test_Scenario#VerifyAdminApprovalflowPositiveflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">front_test.Front_test_Scenario#VerifyRegistrationflowPositiveflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">front_test.Front_test_Scenario#VerifyRegistrationflow_blog_contact_footer_withNegativeflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">front_test.Front_test_Scenario#VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

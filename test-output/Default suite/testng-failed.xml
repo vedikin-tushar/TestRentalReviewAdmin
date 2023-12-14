@@ -5,7 +5,9 @@
     <classes>
       <class name="front_test.Front_test_Scenario">
         <methods>
-          <include name="VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow"/>
+          <include name="VerifyRegistrationflowPositiveflow"/>
+          <include name="takeScreenshotTest"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- front_test.Front_test_Scenario -->
     </classes>
