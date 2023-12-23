@@ -2,6 +2,8 @@ package front_test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,8 +31,9 @@ public class Base_Class
 	@BeforeTest
 	public void beforeTest()
 	{
+		String reportdate=new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());	
 		report = new ExtentReports();
-		extent = new ExtentHtmlReporter("test-output"+File.separator+"Report"+File.separator+"Rental-Review"+System.currentTimeMillis()+".html");
+		extent = new ExtentHtmlReporter("test-output"+File.separator+"Report"+File.separator+"Rental-Review"+reportdate+".html");
 		report.attachReporter(extent);
 	}
 //	@Parameters({"browser"})
@@ -56,6 +59,7 @@ public class Base_Class
 			
 			logger.fail("Test case is failed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 		}
+		
 		
 		report.flush();
 	}

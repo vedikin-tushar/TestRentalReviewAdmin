@@ -1,8 +1,9 @@
 package front_test;
 
 	 import java.awt.AWTException;
+import java.io.IOException;
 
-	 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Alert;
 	 import org.openqa.selenium.By;
 	 import org.openqa.selenium.JavascriptExecutor;
 	 import org.openqa.selenium.WebElement;
@@ -12,12 +13,13 @@ package front_test;
 	 import org.testng.AssertJUnit;
 	 import org.testng.annotations.Test;
 	 import io.github.bonigarcia.wdm.WebDriverManager;
+import testUtility.Screenshot;
 
 	 public class Admin_test_Scenarios extends Base_Class
 	 {
 	 	@Test(priority=5)
 
-	 	public void VerifyadminPositiveflow() throws InterruptedException, AWTException	
+	 	public void VerifyadminPositiveflow() throws InterruptedException, AWTException, IOException	
 	 	{
 	 		logger = report.createTest("VerifyadminPositiveflow");
 	 		
@@ -27,7 +29,6 @@ package front_test;
 	 		
 	 		Thread.sleep(6000);
 	 		
-//////	 		driver.get("https://sonline.us/rental-review/admin/");
 	 		driver.get("https://sonline.us/rental-review/admin-dev/");
 	 		driver.manage().window().maximize();
 	 		
@@ -38,7 +39,6 @@ package front_test;
 	 		Thread.sleep(6000);
 	 		
 	 		String Expected_URL_1 = "https://sonline.us/rental-review/admin-dev/#/login";
-//////	 		String Expected_URL_1 = "https://sonline.us/rental-review/admin/#/login";
 	 		
 	 		String Actual_URL_1 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_1);
@@ -59,9 +59,9 @@ package front_test;
 	 		
 	 		Thread.sleep(10000);
 	 		
+	 		Screenshot.capturePageScreenshot(driver); 
 	 		
-	 		
-	 		
+	 		Thread.sleep(3000);
 	 		
 	 		
 ////	 	[User Page]	[Add]
@@ -71,7 +71,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_2 = "https://sonline.us/rental-review/admin-dev/#/user-list";
-//////	 		String Expected_URL_2 = "https://sonline.us/rental-review/admin/#/user-list";
 	 		
 	 		String Actual_URL_2 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_2);
@@ -112,7 +111,12 @@ package front_test;
 	 		JavascriptExecutor js = (JavascriptExecutor)driver;
 	 		js.executeScript("arguments[0].click();",A);
 	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver); 
+	 		
 	 		Thread.sleep(6000);
+
 	 		
 ////	 	[User Page]	[Edit]
 
@@ -187,7 +191,12 @@ package front_test;
 	 		
 	 		AssertJUnit.assertEquals(Expected_Status,Actual_Status);
 	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver); 
+	 		
 	 		Thread.sleep(3000);
+	 		
 	 		
 	 		
 	 		
@@ -208,7 +217,6 @@ package front_test;
 	 		Thread.sleep(6000);
 	 		
 	 		String Expected_URL_3 = "https://sonline.us/rental-review/admin-dev/#/review-list";
-//////	 		String Expected_URL_3 = "https://sonline.us/rental-review/admin/#/review-list";
 	 		
 	 		String Actual_URL_3 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_3);
@@ -222,7 +230,6 @@ package front_test;
 	 		Thread.sleep(4000);
 
 	 		String Expected_URL = "https://sonline.us/rental-review/admin-dev/#/review-edit";
-//////	 		String Expected_URL = "https://sonline.us/rental-review/admin/#/review-edit";
 	 		
 	 		String Actual_URL = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL);
@@ -249,7 +256,7 @@ package front_test;
 	 		
 	 		Thread.sleep(2000);
 	 		
-	 		String Expected_propertyname = "Property Name*";
+	 		String Expected_propertyname = "Property Name";
 	 		
 	 		WebElement propertyname = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
 	 		String Actual_propertyname = propertyname.getText();
@@ -315,7 +322,13 @@ package front_test;
 	 		
 	 		jsC.executeScript("arguments[0].click();",C);
 	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver); 
+	 		
 	 		Thread.sleep(8000);
+	 		
+	 		
 	 		
 	 		
 	 		
@@ -333,7 +346,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 			
 	 		String Expected_URL_4 = "https://sonline.us/rental-review/admin-dev/#/question-list";
-//////	 		String Expected_URL_4 = "https://sonline.us/rental-review/admin/#/question-list";
 	 		
 	 		String Actual_URL_4 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_4);
@@ -370,6 +382,10 @@ package front_test;
 	 		JavascriptExecutor jsD = (JavascriptExecutor)driver;
 	 		
 	 		jsD.executeScript("arguments[0].click();",D);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(6000);
 	 		
@@ -447,7 +463,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_5 = "https://sonline.us/rental-review/admin-dev/#/question-type-list";
-//////	 		String Expected_URL_5 = "https://sonline.us/rental-review/admin/#/question-type-list";
 	 		
 	 		String Actual_URL_5 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_5);
@@ -469,6 +484,10 @@ package front_test;
 	 		JavascriptExecutor jsF = (JavascriptExecutor)driver;
 	 		
 	 		jsF.executeScript("arguments[0].click();",F);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(6000);
 	 		
@@ -536,9 +555,7 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_11 = "https://sonline.us/rental-review/admin-dev/#/review-edit";
-//////	 		String Expected_URL_11 = "https://sonline.us/rental-review/admin/#/review-edit";
-	 		
-	 	
+	 		 	
 	 		String Actual_URL_11 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_11);
 	 		
@@ -564,7 +581,7 @@ package front_test;
 	 		
 	 		Thread.sleep(3000);
 	 		
-	 		String Expected_propertyname_1 = "Property Name*";
+	 		String Expected_propertyname_1 = "Property Name";
 	 		
 	 		WebElement propertyname_1 = driver.findElement(By.xpath("//*[@id=\"validation-form\"]/fieldset/div/div[2]/div[3]/label"));
 	 		String Actual_propertyname_1 = propertyname_1.getText();
@@ -630,6 +647,10 @@ package front_test;
 	 		
 	 		jsI.executeScript("arguments[0].click();",I);
 	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
+	 		
 	 		Thread.sleep(8000);
 	 		
 	 		
@@ -649,7 +670,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_6 = "https://sonline.us/rental-review/admin-dev/#/blog-list";
-//////	 		String Expected_URL_6 = "https://sonline.us/rental-review/admin/#/blog-list";
 	 		
 	 		String Actual_URL_6 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_6);
@@ -795,6 +815,10 @@ package front_test;
 	 		
 	 		jsJ.executeScript("arguments[0].click();",J);
 	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
+	 		
 	 		Thread.sleep(6000);
 	 		
 ////	 	[Blog Page]	[Edit]		
@@ -916,7 +940,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_7 = "https://sonline.us/rental-review/admin-dev/#/blog-category-list";
-////	 		String Expected_URL_7 = "https://sonline.us/rental-review/admin/#/blog-category-list";
 	 		
 	 		String Actual_URL_7 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_7);
@@ -938,6 +961,10 @@ package front_test;
 	 		JavascriptExecutor jsL = (JavascriptExecutor)driver;
 	 		
 	 		jsL.executeScript("arguments[0].click();",L);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(6000);
 	 		
@@ -1010,7 +1037,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_8 = "https://sonline.us/rental-review/admin-dev/#/faq-list";
-//////	 		String Expected_URL_8 = "https://sonline.us/rental-review/admin/#/faq-list";
 	 		
 	 		String Actual_URL_8 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_8);
@@ -1036,6 +1062,10 @@ package front_test;
 	 		JavascriptExecutor jsN = (JavascriptExecutor)driver;
 	 		
 	 		jsN.executeScript("arguments[0].click();",N);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(6000);
 	 		
@@ -1108,7 +1138,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_9 = "https://sonline.us/rental-review/admin-dev/#/cms-list";
-//////	 		String Expected_URL_9 = "https://sonline.us/rental-review/admin/#/cms-list";
 	 		
 	 		String Actual_URL_9 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_9);
@@ -1146,6 +1175,10 @@ package front_test;
 	 		JavascriptExecutor jsP = (JavascriptExecutor)driver;
 	 		
 	 		jsP.executeScript("arguments[0].click();",P);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(5000);
 	 		
@@ -1190,7 +1223,6 @@ package front_test;
 	 		Thread.sleep(3000);
 	 		
 	 		String Expected_URL_10 = "https://sonline.us/rental-review/admin-dev/#/testinomial-list";
-//////	 		String Expected_URL_10 = "https://sonline.us/rental-review/admin/#/testinomial-list";
 	 		
 	 		String Actual_URL_10 = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_10);
@@ -1231,6 +1263,10 @@ package front_test;
 	 		JavascriptExecutor jsR = (JavascriptExecutor)driver;
 	 		
 	 		jsR.executeScript("arguments[0].click();",R);
+	 		
+	 		Thread.sleep(2000);
+	 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		Thread.sleep(5000);
 	 		
@@ -1324,7 +1360,6 @@ package front_test;
 	 		
 	 		
 	 		String Expected_URL_11A = "https://sonline.us/rental-review/admin-dev/#/login";
-//////	 		String Expected_URL_11A = "https://sonline.us/rental-review/admin/#/login";
 	 		
 	 		String Actual_URL_11A = driver.getCurrentUrl();
 	 		System.out.println(Actual_URL_11A);
@@ -1332,6 +1367,8 @@ package front_test;
 	 		AssertJUnit.assertEquals(Expected_URL_11A,Actual_URL_11A);
 	 		
 	 		Thread.sleep(3000);
+	 		 		
+	 		Screenshot.capturePageScreenshot(driver);
 	 		
 	 		driver.quit();
 	 		

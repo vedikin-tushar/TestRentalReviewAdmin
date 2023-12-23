@@ -26,6 +26,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import testUtility.Screenshot;
 
 
 public class Front_test_Scenario extends Base_Class
@@ -34,7 +35,7 @@ public class Front_test_Scenario extends Base_Class
 	
 	@Test(priority=0)
 
-	public void VerifyRegistrationflowPositiveflow () throws InterruptedException, AWTException	
+	public void VerifyRegistrationflowPositiveflow () throws InterruptedException, AWTException, IOException	
 	{
 		logger = report.createTest("VerifyRegistrationflowPositiveflow");
 		
@@ -43,7 +44,6 @@ public class Front_test_Scenario extends Base_Class
 		this.driver = driver;
 		Thread.sleep(6000);
 		
-//////		driver.get("https://sonline.us/rental-review/");
 		driver.get("https://sonline.us/rental-review/front-dev/");
 		driver.manage().window().maximize();
 		
@@ -54,7 +54,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(6000);
 		
 		String Expected_URL_1 = "https://sonline.us/rental-review/front-dev/#/home";
-//////		String Expected_URL_1 = "https://sonline.us/rental-review/#/home";
 		
 		String Actual_URL_1 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_1);
@@ -103,6 +102,8 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(8000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
 		driver.quit();
 		
 		logger.pass("Test case is pass");
@@ -111,19 +112,17 @@ public class Front_test_Scenario extends Base_Class
 		@Test (priority=1)
 ////	[Goint to admin approval]
 		
-	public void VerifyAdminApprovalflowPositiveflow() throws InterruptedException, AWTException	
+	public void VerifyAdminApprovalflowPositiveflow() throws InterruptedException, AWTException, IOException	
 		{
 			logger = report.createTest("VerifyAdminApprovalflowPositiveflow");
 			
 			WebDriverManager.chromedriver().setup();
 			ChromeDriver driver = new ChromeDriver();
 			this.driver = driver;
-	
 		
-		Thread.sleep(6000);
-		
-//////		driver.get("https://sonline.us/rental-review/admin/");
-		driver.get("https://sonline.us/rental-review/admin-dev/");
+		Thread.sleep(6000);		
+
+		driver.get("https://sonline.us/rental-review/front-dev/admin-dev/");
 		driver.manage().window().maximize();
 		
 		Thread.sleep(3000);
@@ -132,8 +131,7 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(6000);
 		
-		String Admin_Expected_URL_1 = "https://sonline.us/rental-review/admin-dev/#/login";
-//////		String Expected_URL_1 = "https://sonline.us/rental-review/admin/#/login";
+		String Admin_Expected_URL_1 = "https://sonline.us/rental-review/front-dev/admin-dev/#/login";
 		
 		String Admin_Actual_URL_1 = driver.getCurrentUrl();
 		System.out.println(Admin_Actual_URL_1);
@@ -160,8 +158,7 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(3000);
 		
-		String Expected_URL_2 = "https://sonline.us/rental-review/admin-dev/#/user-list";
-//////		String Expected_URL_2 = "https://sonline.us/rental-review/admin/#/user-list";
+		String Expected_URL_2 = "https://sonline.us/rental-review/front-dev/admin-dev/#/user-list";
 		
 		String Actual_URL_2 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_2);
@@ -211,16 +208,19 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(5000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.quit();
 		
 		logger.pass("Test case is pass");
 	}
-	
-			
+				
 		
 		@Test(priority=2)
 		
-	public void VerifySigninflowPositiveflow() throws InterruptedException, AWTException	
+	public void VerifySigninflowPositiveflow() throws InterruptedException, AWTException, IOException	
 	{
 		logger = report.createTest("VerifySigninflowPositiveflow");
 			
@@ -230,7 +230,6 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(6000);
 			
-//////		driver.get("https://sonline.us/rental-review/");
 		driver.get("https://sonline.us/rental-review/front-dev/");
 		driver.manage().window().maximize();
 			
@@ -241,7 +240,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(6000);
 			
 		String Expected_URL_1 = "https://sonline.us/rental-review/front-dev/#/home";
-//////		String Expected_URL_1 = "https://sonline.us/rental-review/#/home";
 			
 		String Actual_URL_1 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_1);
@@ -419,7 +417,9 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
 		
+		Thread.sleep(3000);
 		
 		
 		
@@ -437,6 +437,10 @@ public class Front_test_Scenario extends Base_Class
 		driver.findElement(By.xpath("//*[@id=\"main-menu1\"]/li[1]/a")).click();
 		
 		Thread.sleep(3000);
+		
+		driver.findElement(By.id("search_option_smart")).sendKeys("270, Sheldon Ave, Etobicoke");
+		
+		Thread.sleep(5000);
 		
 		WebElement Select_State = driver.findElement(By.xpath("/html/body/app-root/app-home/html/body/div/div/div/div[1]/section/div/div/div/div[2]/form/div/div[2]/div/select"));
 		Select ss = new Select(Select_State); 
@@ -472,6 +476,10 @@ public class Front_test_Scenario extends Base_Class
 //			
 //		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		String Expected_Address = "270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario";
 		
 		WebElement get_Actual_Address = driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']"));
@@ -479,11 +487,11 @@ public class Front_test_Scenario extends Base_Class
 			
 		AssertJUnit.assertEquals(Expected_Address,Actual_Address);
 			
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']")).click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		
 		JavascriptExecutor JSProperty_detail = (JavascriptExecutor)driver;
 		
@@ -635,12 +643,15 @@ public class Front_test_Scenario extends Base_Class
 					
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
 		
 		
 		
 		
 		
-		
+			
 		
 		
 		
@@ -650,6 +661,10 @@ public class Front_test_Scenario extends Base_Class
 		driver.findElement(By.xpath("//*[@id=\"main-menu1\"]/li[2]/a")).click();
 		
 		Thread.sleep(6000);
+		
+		driver.findElement(By.id("search_option_smart")).sendKeys("270, Sheldon Ave, Etobicoke");
+		
+		Thread.sleep(3000);
 		
 		WebElement Select_State_SearchPG = driver.findElement(By.xpath("//*[@id=\"search-banner\"]/div[1]/div[2]/div/div/select"));
 		Select sssp= new Select(Select_State_SearchPG); 
@@ -691,6 +706,10 @@ public class Front_test_Scenario extends Base_Class
 //		AssertJUnit.assertEquals(Expected_Property_1,Actual_Property_1);
 //			
 //		Thread.sleep(3000);
+			
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
 		
 		String Expected_Address_1 = "270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario";
 		
@@ -699,11 +718,11 @@ public class Front_test_Scenario extends Base_Class
 			
 		AssertJUnit.assertEquals(Expected_Address_1,Actual_Address_1);
 			
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		driver.findElement(By.xpath("//span[text()='270, Sheldon Ave, Etobicoke, Alderwood, Toronto, Canada-Ontario']")).click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		
 		JavascriptExecutor JSProperty_detail_1 = (JavascriptExecutor)driver;
 		
@@ -767,7 +786,7 @@ public class Front_test_Scenario extends Base_Class
 		
 		@Test(priority=3)
 		
-	public void VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException	
+	public void VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException, IOException	
 	{
 		logger = report.createTest("VerifySignin_forgotpswd_registrationflow_blog_contact_footer_withNegativeflow");
 			
@@ -777,7 +796,6 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(6000);
 			
-//////		driver.get("https://sonline.us/rental-review/");
 		driver.get("https://sonline.us/rental-review/front-dev/");
 		driver.manage().window().maximize();
 			
@@ -788,7 +806,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(6000);
 			
 		String Expected_URL_1 = "https://sonline.us/rental-review/front-dev/#/home";
-//////		String Expected_URL_1 = "https://sonline.us/rental-review/#/home";
 			
 		String Actual_URL_1 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_1);
@@ -819,6 +836,10 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("//*[@id=\"not_login\"]/a[1]/b")).click();
 		
 		Thread.sleep(3000);
@@ -844,6 +865,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_Wrongcred_validation1 = get_Actual_Wrongcred_validation.getText();
 			
 		AssertJUnit.assertEquals(Expected_Wrongcred_validation,Actual_Wrongcred_validation1);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -876,6 +901,10 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("AutomationTest@gmail.com");
 		
 		Thread.sleep(3000);
@@ -896,6 +925,10 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.quit();
 		
 		logger.pass("Test case is pass");
@@ -905,7 +938,7 @@ public class Front_test_Scenario extends Base_Class
 			
 		@Test(priority=4)
 		
-	public void VerifyRegistrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException	
+	public void VerifyRegistrationflow_blog_contact_footer_withNegativeflow() throws InterruptedException, AWTException, IOException	
 	{
 		logger = report.createTest("VerifyRegistrationflow_blog_contact_footer_withNegativeflow");
 			
@@ -915,7 +948,6 @@ public class Front_test_Scenario extends Base_Class
 			
 		Thread.sleep(6000);
 			
-//////		driver.get("https://sonline.us/rental-review/");
 		driver.get("https://sonline.us/rental-review/front-dev/");
 		driver.manage().window().maximize();
 			
@@ -926,7 +958,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(6000);
 			
 		String Expected_URL_1 = "https://sonline.us/rental-review/front-dev/#/home";
-//////		String Expected_URL_1 = "https://sonline.us/rental-review/#/home";
 			
 		String Actual_URL_1 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_1);
@@ -957,6 +988,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_Written_ValidationRF = get_Actual_ValidationRF.getText();
 		System.out.println(Actual_Written_ValidationRF);			
 			
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
+		
 		Thread.sleep(3000);
 				
 		driver.findElement(By.id("inputNameSurname")).sendKeys("AutomationUser");
@@ -1015,11 +1050,23 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("//span[text()= 'Aparment']")).click();
 		
 		Thread.sleep(3000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("//span[text()= 'Land']")).click();
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1086,6 +1133,10 @@ public class Front_test_Scenario extends Base_Class
 		
 		Thread.sleep(4000);
 		
+		Screenshot.capturePageScreenshot(driver); 
+		
+		Thread.sleep(3000);
+		
 		JavascriptExecutor JScp = (JavascriptExecutor)driver;
 		
 		JScp.executeScript("window.scrollBy(0,1000)");
@@ -1116,7 +1167,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(8000);
 		
 		String Expected_URL_10 = "https://sonline.us/rental-review/front-dev/#/contact";
-//////	String Expected_URL_10 = "https://sonline.us/rental-review/#/contact";
 		
 		String Actual_URL_10 = driver.getCurrentUrl();
 		System.out.println(Actual_URL_10);
@@ -1128,6 +1178,10 @@ public class Front_test_Scenario extends Base_Class
 		JavascriptExecutor JScp2 = (JavascriptExecutor)driver;
 		
 		JScp2.executeScript("window.scrollBy(0,-700)");
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1156,6 +1210,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_footer = get_Actual_footer.getText();
 			
 		AssertJUnit.assertEquals(Expected_footer,Actual_footer);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1208,7 +1266,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(3000);
 		
 		String Expected_URL_FAQ = "https://sonline.us/rental-review/front-dev/#/faqs";
-//////	String Expected_URL_FAQ = "https://sonline.us/rental-review/#/faqs";
 		
 		String Actual_URL_FAQ = driver.getCurrentUrl();
 		System.out.println(Actual_URL_FAQ);
@@ -1223,6 +1280,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_FAQ_ = get_Actual_FAQ_.getText();
 			
 		AssertJUnit.assertEquals(Expected_FAQ_,Actual_FAQ_);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1245,7 +1306,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(3000);
 		
 		String Expected_URL_PrivacyP = "https://sonline.us/rental-review/front-dev/#/privacy-policy";
-//////	String Expected_URL_PrivacyP = "https://sonline.us/rental-review/#/privacy-policy";
 		
 		String Actual_URL_PrivacyP = driver.getCurrentUrl();
 		System.out.println(Actual_URL_PrivacyP);
@@ -1260,6 +1320,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_PrivacyP = get_Actual_PrivacyP.getText();
 			
 		AssertJUnit.assertEquals(Expected_PrivacyP,Actual_PrivacyP);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1283,7 +1347,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(3000);
 		
 		String Expected_URL_tenantOrg = "https://sonline.us/rental-review/front-dev/#/tenant-organization";
-//////	String Expected_URL_tenantOrg = "https://sonline.us/rental-review/#/tenant-organization";
 		
 		String Actual_URL_tenantOrg = driver.getCurrentUrl();
 		System.out.println(Actual_URL_tenantOrg);
@@ -1298,6 +1361,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_TenantO = get_Actual_TenantO.getText();
 			
 		AssertJUnit.assertEquals(Expected_TenantO,Actual_TenantO);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		
@@ -1320,7 +1387,6 @@ public class Front_test_Scenario extends Base_Class
 		Thread.sleep(3000);
 		
 		String Expected_URL_communityGude = "https://sonline.us/rental-review/front-dev/#/community-guidelines";
-//////	String Expected_URL_communityGude = "https://sonline.us/rental-review/#/community-guidelines";
 		
 		String Actual_URL_communityGude = driver.getCurrentUrl();
 		System.out.println(Actual_URL_communityGude);
@@ -1335,6 +1401,10 @@ public class Front_test_Scenario extends Base_Class
 		String Actual_communityG = get_Actual_communityG.getText();
 			
 		AssertJUnit.assertEquals(Expected_communityG,Actual_communityG);
+		
+		Thread.sleep(3000);
+		
+		Screenshot.capturePageScreenshot(driver); 
 		
 		Thread.sleep(3000);
 		

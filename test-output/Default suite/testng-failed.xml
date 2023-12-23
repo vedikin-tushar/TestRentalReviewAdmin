@@ -5,8 +5,8 @@
     <classes>
       <class name="front_test.Front_test_Scenario">
         <methods>
-          <include name="VerifyRegistrationflowPositiveflow"/>
           <include name="takeScreenshotTest"/>
+          <include name="VerifySigninflowPositiveflow"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- front_test.Front_test_Scenario -->
